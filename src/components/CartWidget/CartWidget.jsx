@@ -1,11 +1,11 @@
 
-import { FaShoppingCart } from "react-icons/fa";
+import { BiCart } from "react-icons/bi";
 
 export const CartWidget = () => {
 return (
-    <div className="d-flex" >
-        <FaShoppingCart color="green" size={25} />
-        <p className="mx-2">Comprar</p>
+    <div className="h-25">
+        <BiCart size={28}/>
+        <strong>4</strong>
     </div>
 )
 }

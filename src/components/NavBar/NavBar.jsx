@@ -1,15 +1,24 @@
+import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 
 export const NavBar = () => {
 return (
     <nav className="d-flex justify-content-around p-4">
-        <img src="https://lzd-img-global.slatic.net/g/p/68b52a5932b6f2bb8149881ce6ce77f0.jpg_720x720q80.jpg" alt="" style={{width: "150px"}}/>
-        <div>
-        <button className="btn btn-success mx-2">Home</button>
-        <button className="btn btn-success mx-2">Productos</button>
-        <button className="btn btn-success mx-2">Contactos</button>
+        <h4>Swag Shoes</h4>
+    <div>
+        <Link to="/">
+        <button className="btn btn-outline-dark mx-2">Home</button>
+        </Link>
+        <Link to="/category/calzados">
+        <button className="btn btn-outline-dark mx-2">Shoes</button>
+        </Link>
+        <Link to="/category/ropa">
+        <button className="btn btn-outline-dark mx-2">Others</button>
+        </Link>
     </div>
+    <Link to="/cart">
     <CartWidget />
-    </nav>
-)
-}
+    </Link>
+    </nav> 
+    );
+};
